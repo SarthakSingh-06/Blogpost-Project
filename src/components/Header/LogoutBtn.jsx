@@ -7,12 +7,13 @@ function LogoutBtn() {
 
     const logoutHandler = async () => {
         await authService.logout();
-        dispatch(logout);
+        dispatch(logout());
     };
 
     return (
         <button
             className="inline-block px-6 py-2 duration-300 hover:bg-blue-100 rounded-full"
+            onClick={logoutHandler}
         >Logout</button>
     );
 };
